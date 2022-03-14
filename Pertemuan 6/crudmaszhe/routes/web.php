@@ -15,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return redirect('/mahasiswas');
+    // return view('home');
+    //redirect('/mahasiswas');
 });
 
 Route::resource('mahasiswas', 'MahasiswaController');

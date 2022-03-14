@@ -31,7 +31,7 @@
                         </div>
                         <div class="form-group">
                             <label>Offering</label>
-                            <input type="text" name="offering" placeholder="Masukkan Prodi mahasiswa" class="form-control mb-2" value="{{ route('mahasiswas.update', $mahasiswa->id) }}">
+                            <input type="text" name="offering" placeholder="Masukkan Prodi mahasiswa" class="form-control mb-2" value="{{ $mahasiswa->offering }}">
                         </div>
 
                         <button type="submit" name="submit" class="btn btn-success mt-3">Update</button>
