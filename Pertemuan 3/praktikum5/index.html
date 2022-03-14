@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../jquery-3.6.0.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>praktikum 5</title>
+</head>
+
+<body>
+    <div class="container py-4">
+        <h3>Praktikum 5</h3>
+        <div class="form-group p-1">
+            <input type="number" class="form-control" id="number1" placeholder="Masukkan Angka pertama">
+        </div>
+        <div class="form-group p-1 text-center ">
+            <select id="pilihan" class="form-control">
+                <option value="" selected disabled>Pilih Operator</option>
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="x">x</option>
+                <option value="/">:</option>
+            </select>
+        </div>
+        <div class="form-group p-1">
+            <input type="number" class="form-control" id="number2" placeholder="Masukkan Angka kedua">
+        </div>
+        <div class="form-group p-1 text-center">
+            <div class="btn btn-primary btn-lg" onclick="kalkulator()">=</div>
+        </div>
+        <div class="form-group p-1">
+            <input type="number" class="form-control" id="total" value="total" placeholder="Hasil" readonly>
+        </div>
+    </div>
+</body>
+
+<script>
+    function kalkulator() {
+        var number1 = parseInt(document.getElementById("number1").value);
+        var number2 = parseInt(document.getElementById("number2").value);
+        var pilihan = document.getElementById("pilihan").value;
+        var hasil = document.getElementById("total");
+        var total;
+        if (isNaN(number1) || isNaN(number2)) {
+            alert('isi form dengan angka!')
+        } else {
+            if (pilihan == "+") {
+                total = number1 + number2;
+            } else if (pilihan == "-") {
+                total = number1 - number2;
+            } else if (pilihan == "x") {
+                total = number1 * number2;
+            } else {
+                total = number1 / number2;
+            }
+        }
+        hasil.value = total;
+    }
+</script>
+
+</html>

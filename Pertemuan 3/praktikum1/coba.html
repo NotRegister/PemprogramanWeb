@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="checkbox" value="satu" name="check[]" onclick="addlist(this, 'txt1')">
+    <input type="checkbox" value="dua" name="check[]" onclick="addlist(this, 'txt1')">
+
+    <textarea id=" txt1"><textarea>
+
+    </body>
+<script type="text/javascript">
+ 
+function addlist(checkobj, output) {
+ 
+   var checkgrup    = checkobj.form[checkobj.name];
+   var cheklength   = checkgrup.length;
+   var list         = new Array();
+ 
+   if (checklength > 1) {
+ 
+      for ( var i = 0; i < checklength; i++) {
+ 
+         if (checkgrup[i].checked) {
+ 
+            list[list.length] = checkgrup[i].value;
+ 
+         }
+ 
+      }
+ 
+   } else {
+ 
+      if (checkgrup.checked) {
+ 
+         list[list.length] = checkgrup.value;
+ 
+      }
+ 
+   }
+ 
+   document.getElementById(output).value = list.join(', ');
+ 
+   return
+ 
+}
+</script>
+</html>

@@ -1,0 +1,32 @@
+Buatlah sebuah program website dengan ketentuan minimal menggunakan beberapa teknik dan fitur sebagai berikut:
+-    Template framework Bootstrap.
+-    Form login dan forgot password (by email).
+-    Edit password untuk User.
+-    Session & cookies.
+-    Pretty URL (htacces). // RewriteRule ^/?([a-z0-9]+)$ $1.php [NC,L]  
+-    CRUD (Create, Read, Update dan Delete).
+-    Plugin DataTable.
+    Plugin jQuery Form Validation sejenisnya.
+Catatan: Laporan dibuat dalam bentuk demo program (video) maksimal 5 menit.
+
+htakses
+#RewriteEngine On
+
+#RewriteCond %{REQUEST_FILENAME}.php !-f
+#RewriteRule ^home/([0-9a-zA-Z]+) home.php?home=$1 [NC]
+
+===== nandha ======
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)\.txt$ $1.php [NC,L]
+RewriteRule ^([a-zA-Z0-9_-]+)$ index.php?page=$1
+RewriteRule ^([a-zA-Z0-9_-]+)/$ index.php?page=$1
+
+==== gogel ======
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
+RewriteRule ^index.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script>
+        $(document).ready(function () {
+            $("#validasi").click(function (e) { 
+                $("#form").validate({
+                    rules: {
+                        nama:{
+                            required :true,
+                            lettersonly: true
+                        },
+                        nim: {
+                            required :true,
+                            interger :true,
+                            minlength: 12
+                        },
+                        telp: {
+                            required :true,
+                            interger :true,
+                            minlength: 6,
+                            maxlength: 8
+                        },
+                        kota: {
+                            required :true,
+                            lettersonly :true
+                        },
+                        edu: {
+                            required :true,
+                        },
+                        xp: {
+                            required :true,
+                        }
+                    }
+                }
+                )})
+            $("#del").click(function (e) { 
+                $("#form").val("");
+            });
+
+            });
+    </script>
+    <title>Praktikum 6</title>
+</head>
+<body>
+    <form action="" id="form">
+    <div class="container mt-5 my-y">
+        <h3>Praktikum 6</h3>
+        <div class="row">
+            <div class="col-2">Nama</div>
+            <div class="col mb-3"><input type="text" name="nama" id=""></div>
+        </div>
+        <div class="row">
+            <div class="col-2">Nim</div>
+            <div class="col mb-3"><input type="number" maxlength="12" name="nim" id=""></div>
+        </div>
+        <div class="row">
+            <div class="col-2">Telepon</div>
+            <div class="col mb-3"><input type="number" minlength="6" maxlength="8" name="telp" id=""></div>
+        </div>
+        <div class="row">
+            <div class="col-2">Kota</div>
+            <div class="col mb-3"><input type="text" name="kota" id=""></div>
+        </div>
+        <div class="row">
+            <div class="col-2">Tanggal Lahir</div>
+            <div class="col mb-3"><input type="date" name="tgl" id=""></div>
+        </div>
+        <div class="row">
+            <div class="col-2">Pendidikan</div>
+            <div class="col mb-3"><select name="" id="edu">
+                <option value="SD">SD</option>
+                <option value="SMP">SMP</option>
+                <option value="SMA">SMA</option>
+                <option value="D3">D3</option>
+                <option value="S1">S1</option>
+            </select></div>
+        </div>
+        <div class="row">
+            <div class="col-2">Pengalaman</div>
+            <div class="col mb-3"><input type="text" name="xp" id=""></div>
+        </div>
+        <div class="">
+            <div class="col mb-3"><button class="btn btn-primary" id="validasi">Submit</button></div>
+            <div class="col"><button class="btn btn-danger" id="del">Hapus</button></div>
+        </div>
+    </div>
+</form>
+</body>
+</html>

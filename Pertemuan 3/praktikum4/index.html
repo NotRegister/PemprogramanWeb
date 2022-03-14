@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Praktikum 4</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="../jquery-3.6.0.js"></script>
+</head>
+
+<body>
+    <div class="container py-4">
+        <h1>Praktikum 4</h1>
+            <label class="form-label">Teks</label>
+            <input class="form-control" type="text" id="form" name="name">
+            <br>
+            <div>
+                <label class="form-label">Warna</label>
+                <select name="dropbox" id="dropbox" class="form-control">
+                    <option value="" selected disabled value>Pilih Warna</option>
+                    <option value="1">Red</option>
+                    <option value="2">Green</option>
+                    <option value="3">Blue</option>
+                </select>
+            </div>
+            <br>
+            <label class="form-label">Ukuran font</label>
+            <select id="fs_option" class="form-control">
+                <option value='12'>12</option>
+                <option value='14'>14</option>
+                <option value='16'>16</option>
+                <option value='18'>18</option>
+                <option value='20'>20</option>
+                <option value='22'>22</option>
+                <option value='24'>24</option>
+                <option value='26'>26</option>
+                <option value='28'>28</option>
+            </select>
+            <br>
+            <div>
+                <button id="cetak" class="btn btn-outline-primary">cetak</button>
+            </div>
+            <br>
+            <p>Hasil : <span id="hasil"></span>
+            </p>
+    </div>
+</body>
+<script>
+    $(document).ready(function () {
+        $("#cetak").on("click", function (e) {
+            e.preventDefault();
+            var input = $("#form").val()
+            $("#hasil").html(input)
+            $("#hasil").css("font-size", $("#fs_option").val() + "px")
+        })
+        const colors = {
+            1: "red",
+            2: "green",
+            3: "blue"
+        }
+        const select = document.querySelector("select")
+        const hasil = document.querySelector("span#hasil")
+        select.onclick = e => {
+            hasil.style.color = colors[e.target.selectedIndex]
+        }
+    });
+</script>
+
+</html>
