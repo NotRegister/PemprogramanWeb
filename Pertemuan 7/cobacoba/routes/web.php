@@ -76,5 +76,6 @@ Route::get('dosen/bg2', function () {
 });
 
 Route::get('gallery/bg2', function () {
-    return view('bagian2.gallery');
+    $arrGambar = ['/img/1.jpg', '/img/2.jpg', '/img/3.jpg'];
+    return view('bagian2.gallery')->with('arrGambar', $arrGambar);
 });
