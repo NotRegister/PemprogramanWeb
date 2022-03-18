@@ -63,19 +63,40 @@ Route::get('/mahasiswa/con', function () {
 
 //! ===================================================
 //!                     Bagian 2
+//!                 (Contoh Include)
 //! ===================================================
 
-Route::get('mahasiswa/bg2', function () {
+Route::get('mahasiswa/ic', function () {
     $arrMahasiswa = ['risa lestari', 'rudi herawan', 'rieki hredaya', 'riyan hidayat', 'bambang kusumo'];
-    return view('bagian2.mahasiswa')->with('arrMahasiswa', $arrMahasiswa);
+    return view('bagian2include.mahasiswa')->with('arrMahasiswa', $arrMahasiswa);
 });
 
-Route::get('dosen/bg2', function () {
+Route::get('dosen/ic', function () {
     $arrDosen = ["Maya lestari, M.M", "Prof. Silvia, M.Si", "Prof. Rieki, M.Si"];
-    return view('bagian2.dosen')->with('arrDosen', $arrDosen);
+    return view('bagian2include.dosen')->with('arrDosen', $arrDosen);
 });
 
-Route::get('gallery/bg2', function () {
+Route::get('gallery/ic', function () {
     $arrGambar = ['/img/1.jpg', '/img/2.jpg', '/img/3.jpg'];
-    return view('bagian2.gallery')->with('arrGambar', $arrGambar);
+    return view('bagian2include.gallery')->with('arrGambar', $arrGambar);
+});
+
+//! ===================================================
+//!                     Bagian 2
+//!                 (Contoh Extends)
+//! ===================================================
+
+Route::get('mahasiswa/ex', function () {
+    $arrMahasiswa = ['risa lestari', 'rudi herawan', 'rieki hredaya', 'riyan hidayat', 'bambang kusumo'];
+    return view('bagian2include.mahasiswa')->with('arrMahasiswa', $arrMahasiswa);
+});
+
+Route::get('dosen/ex', function () {
+    $arrDosen = ["Maya lestari, M.M", "Prof. Silvia, M.Si", "Prof. Rieki, M.Si"];
+    return view('bagian2include.dosen')->with('arrDosen', $arrDosen);
+});
+
+Route::get('gallery/ex', function () {
+    $arrGambar = ['/img/1.jpg', '/img/2.jpg', '/img/3.jpg'];
+    return view('bagian2include.gallery')->with('arrGambar', $arrGambar);
 });

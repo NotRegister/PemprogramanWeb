@@ -1,5 +1,4 @@
-@include('bagian2.layout.header')
-
+@include('bagian2include.layout.header', ['title'=>'Data Mahasiswa', 'activeMaha'=>'active', 'activeDosen'=>'', 'activeGallery'=>''])
 <div class="container text-center mt-3 p-4 bg-white">
     <h1>Data Mahasiswa</h1>
     <div class="row">
@@ -15,4 +14,4 @@
     </div>
 </div>
 
-@include('bagian2.layout.footer')
+@include('bagian2include.layout.footer')
