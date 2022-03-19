@@ -88,15 +88,48 @@ Route::get('gallery/ic', function () {
 
 Route::get('mahasiswa/ex', function () {
     $arrMahasiswa = ['risa lestari', 'rudi herawan', 'rieki hredaya', 'riyan hidayat', 'bambang kusumo'];
-    return view('bagian2include.mahasiswa')->with('arrMahasiswa', $arrMahasiswa);
+    return view('bagian2extends.mahasiswa')->with('arrMahasiswa', $arrMahasiswa);
 });
 
 Route::get('dosen/ex', function () {
     $arrDosen = ["Maya lestari, M.M", "Prof. Silvia, M.Si", "Prof. Rieki, M.Si"];
-    return view('bagian2include.dosen')->with('arrDosen', $arrDosen);
+    return view('bagian2extends.dosen')->with('arrDosen', $arrDosen);
 });
 
 Route::get('gallery/ex', function () {
     $arrGambar = ['/img/1.jpg', '/img/2.jpg', '/img/3.jpg'];
-    return view('bagian2include.gallery')->with('arrGambar', $arrGambar);
+    return view('bagian2extends.gallery')->with('arrGambar', $arrGambar);
+});
+
+//! ===================================================
+//!                     Bagian 3
+//!             (Contoh Section Extends)
+//! ===================================================
+
+Route::get('mahasiswa/ex3', function () {
+    $arrMahasiswa = ['risa lestari', 'rudi herawan', 'rieki hredaya', 'riyan hidayat', 'bambang kusumo'];
+    return view('bagian3extends.mahasiswa')->with('arrMahasiswa', $arrMahasiswa);
+});
+
+Route::get('dosen/ex3', function () {
+    $arrDosen = ["Maya lestari, M.M", "Prof. Silvia, M.Si", "Prof. Rieki, M.Si"];
+    return view('bagian3extends.dosen')->with('arrDosen', $arrDosen);
+});
+
+Route::get('gallery/ex3', function () {
+    $arrGambar = ['/img/1.jpg', '/img/2.jpg', '/img/3.jpg'];
+    return view('bagian3extends.gallery')->with('arrGambar', $arrGambar);
+});
+
+//! ===================================================
+//!                     Bagian 3
+//!          (Contoh Components and Slots)
+//! ===================================================
+
+
+Route::get('admin', function () {
+    return view('bagian3extends.admin');
+});
+Route::get('alert', function () {
+    return view('bagian3extends.layout.alert');
 });

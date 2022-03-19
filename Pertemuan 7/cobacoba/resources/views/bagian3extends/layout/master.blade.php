@@ -23,20 +23,25 @@
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link @yield('acMahasiswa')" href="/mahasiswa/ex">Data Mahasiswa</a>
+                <a class="nav-link @yield('acMahasiswa')" href="/mahasiswa/ex3">Data Mahasiswa</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link @yield('acDosen')" href="/dosen/ex">Data Dosen</a>
+                <a class="nav-link @yield('acDosen')" href="/dosen/ex3">Data Dosen</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link @yield('acGallery')" href="/gallery/ex">Gallery</a>
+                <a class="nav-link @yield('acGallery')" href="/gallery/ex3">Gallery</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link @yield('acAdmin')" href="/admin">Admin</a>
             </li>
         </ul>
     </nav>
 
-    @yield('content')
+    @section('content')
+        <div class="alert alert-primary text-center">Sistem Informasi Mahasiswa</div>
+    @show
 
-    <footer class="bg-dark py-4 text-white mt-4">
+    <footer class="bg-dark py-3 text-white mt-4">
         <div class="container">
             Sistem Informasi Mahasiswa | Copyright © {{ date('Y') }}
         </div>

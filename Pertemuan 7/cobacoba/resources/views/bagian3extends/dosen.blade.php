@@ -1,4 +1,4 @@
-@extends('bagian2extends.layout.master')
+@extends('bagian3extends.layout.master')
 @section('title', 'Data Dosen')
 @section('acDosen', 'active')
 @section('content')

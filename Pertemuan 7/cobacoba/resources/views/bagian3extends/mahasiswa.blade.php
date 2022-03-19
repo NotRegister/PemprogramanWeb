@@ -1,7 +1,8 @@
-@extends('bagian2extends.layout.master')
+@extends('bagian3extends.layout.master')
 @section('title', 'Data Mahasiswa')
 @section('acMahasiswa', 'active')
 @section('content')
+@parent
 <div class="container text-center mt-3 p-4 bg-white">
     <h1>Data Mahasiswa</h1>
     <div class="row">
