@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\CollectionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,3 +33,5 @@ Route::get('/mahasiswa/tampil', [PageController::class, 'tampilmaha']);
 Route::get('/mahasiswa/facade', [PageController::class, 'cobafacade']);
 Route::get('/mahasiswa/facade2', [PageController::class, 'cobafacade2']);
 
+Route::get('/collectionsatu', [CollectionController::class, 'collectionsatu']);
+Route::get('/collectiondua', [CollectionController::class, 'collectiondua']);
