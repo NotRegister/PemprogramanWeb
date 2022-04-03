@@ -32,7 +32,7 @@ class CollectionController extends Controller
         $matkuls = collect([$matkul100, $matkul101, $matkul102, $matkul103]);
     }
 
-    public function collectionsatu()
+    public function collectionpertama()
     {
         $matkul100 = new \stdClass();
         $matkul100->namaMatkul = "Sistem Operasi";
@@ -67,7 +67,7 @@ class CollectionController extends Controller
         echo "Nama mata kuliah di semester 3: " . $tampil;
     }
 
-    public function collectiondua()
+    public function collectionkedua()
     {
         $matkul100 = new \stdClass();
         $matkul100->namaMatkul = "Sistem Operasi";

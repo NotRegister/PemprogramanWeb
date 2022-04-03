@@ -33,5 +33,5 @@ Route::get('/mahasiswa/tampil', [PageController::class, 'tampilmaha']);
 Route::get('/mahasiswa/facade', [PageController::class, 'cobafacade']);
 Route::get('/mahasiswa/facade2', [PageController::class, 'cobafacade2']);
 
-Route::get('/collectionsatu', [CollectionController::class, 'collectionsatu']);
-Route::get('/collectiondua', [CollectionController::class, 'collectiondua']);
+Route::get('/collection1', [CollectionController::class, 'collectionpertama']);
+Route::get('/collection2', [CollectionController::class, 'collectionkedua']);
