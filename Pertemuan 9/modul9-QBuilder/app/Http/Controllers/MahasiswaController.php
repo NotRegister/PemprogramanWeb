@@ -125,7 +125,7 @@ class MahasiswaController extends Controller
         $result = DB::table('mahasiswas')
             ->orderBy('nama', 'asc')
             ->skip(1)
-            ->skip(2)
+            ->take(2)
             ->get();
         return view('tampil-mahasiswa', ['mahasiswas' => $result]);
     }
@@ -142,7 +142,7 @@ class MahasiswaController extends Controller
         return view('tampil-mahasiswa', ['mahasiswas' => [$result]]);
     }
 
-    public function find(Type $var = null)
+    public function find()
     {
         $result = DB::table('mahasiswas')
             ->find(3);
