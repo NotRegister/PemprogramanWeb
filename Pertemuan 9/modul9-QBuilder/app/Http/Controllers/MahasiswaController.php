@@ -30,7 +30,8 @@ class MahasiswaController extends Controller
                 "ipk" => 3.4,
                 "created_at" => now(),
                 "updated_at" => now()
-            ], [
+            ],
+            [
                 'nim' => '18012012',
                 'nama' => 'James Situmorang',
                 'tanggal_lahir' => '1999-04-02',
